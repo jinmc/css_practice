@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            background-color: orangered;
+            width: 700px;
+            height: 500px;
+            position: relative;
+        }
+
+        .box {
+            width: 250px;
+            height: 100px;
+            font-size: 25px;
+            color: white;
+        }
+
+        .box-1 {
+            background-color: green;
+            position: absolute;
+            top: 50px;
+            left: 200px;
+            z-index: 10;
+        }
+
+        .box-2 {
+            background-color: royalblue;
+            z-index: 5;
+            position: relative;
+            /* left: 50px;  left to right 
+            top: 10px;
+            width: 500px;
+            height: 300px; */
+        }
+
+        .box-3 {
+            z-index: 15;
+            position: relative;
+            background-color: grey;
+        }
+
+        .box-4 {
+            background-color: yellowgreen;
+            position: fixed;
+            top: 300px;
+            left: 100px;
+        }
+
+        .box-5 {
+            background-color: black;
+            position: sticky;
+            top: 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+        <div class="box box-4">Box 4</div>
+        <div class="box box-5">Box 5</div>
+
+    </div>
+
+    <p>
+        Absolute postion will be positioned relative to the nearest po
+        sition of ancestor. One exception is that the parent is positoned static.
+        Using position:absolute will exclude that element from the normal flow of the page.
+        We can use top, left, right, and it will also block the existing elemnt if there is any.
+        Also, the parent element matters in this case. If we don't set the position of container, 
+        it is default static, but if we set it to relative or absolute, the green box will be on the bottom 
+        of that element.
+    </p>
+    <p>
+        This is because if the parent element is static, the absolute position attribute will attach to the 
+        body element except for the parent element.
+    </p>
+    <p>
+        CSS also has a z-index value, so the higher z-index value element will win and be displayed.
+        But to do this, we have to have position to not static, something like relative.
+    </p>
+
+    <p>
+        Also, if the element has postion absolute and if it does not have height and width, 
+        it appears like in-line elements. That is, it will have full-width content.
+    </p>
+
+    <p>
+        Fixed position is displayed as box 4. It will remain there 
+        regardless of other elements, and stay there depending the viewport.
+        It will be used such as navigations.
+    </p>
+    <p>
+        (Internet explorer does not support sticky)<br>
+        Sticky postion will act something like fixed, but also has to have
+        top attribute, to stick to the top, until the parent container is over.
+    </p>
+    <a href="index.html">back to main</a>
+
+</body>
+</html>
