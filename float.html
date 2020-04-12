@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .container {
+            position: relative;
+            background-color: #ccc;
+            border-top: 10px solid black;
+            border-bottom: 10px solid blue;
+            /* overflow: auto; */
+        }
+
+        .left {
+            background-color: orangered;
+            width: 100px;
+            height:100px;
+            float: left;
+        }
+
+        .right {
+            background-color: green;
+            width: 100px;
+            height: 100px;
+            float: right;
+        }
+
+        /* .clearfix::after {
+            content:"";
+            display:block;
+            clear:both;
+        } */
+        /* .clear {
+            clear: both;
+        } */
+    </style>
+</head>
+<body>
+    <div class="container clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <!-- <div class="clear"></div> -->
+    </div>
+    <br><br><br>
+    <br><br><br>
+    <br><br><br>
+    <p>
+        Float specifies how an element should float.
+        Float items jump out of normal flow.
+        Absolutely positioned elements ignore the float property!
+        Also float needs width and height, as it's a block property.
+    </p>
+
+    <p>
+        We see that the border top and bottom are right together, 
+        because floats get out of normal flow. There are three ways to fix it.
+    </p>
+
+    <p>
+        The first way is to put overflow: auto in container.<br>
+        The second way is to have a clear element and have attribute clear:both;<br>
+        The third way is to have a class in the parent container and use that class
+        to use the pseudo element after and make content, block element, and clear both attribute.
+    </p>
+    <a href="index.html">back to main</a>
+
+</body>
+</html>

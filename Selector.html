@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+        section p {
+            background-color: red;
+        }
+        section > p {
+            background-color: green;
+        }
+
+        h1 + p {
+            background-color: yellow;
+        }
+
+        h1 ~ p {
+            background-color: orange;
+        }
+
+    </style>
+</head>
+<body>
+    <section>
+        <p>Paragraph 1</p>
+        <h1>Heading</h1>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <div>
+            <p>Nested Paragrpah</p>
+        </div>
+        <p>Paragraph 4</p>
+        <p>Paragraph 5</p>
+    </section>
+    <ul>
+        <li>Descendent[space] - selects not only child but all descendants</li>
+        <li>Child[>] - selects all immediate child</li>
+        <li>Adjacent Sibiling[+] - selects immediately following sibilings</li>
+        <li>General Sibling[~] - Selects all sibiling after specifed selector</li>
+    </ul>
+
+    <p>Note that more specific rule, or the rule that's applied later, will be more dominant.
+        Also, general sibling is little confusing, but it's selecting all the sibilngs after a when b is 
+        a's sibiling as a ~ b.
+    </p>
+    <a href="index.html">back to main</a>
+
+</body>
+</html>
