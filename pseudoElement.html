@@ -6,33 +6,53 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <style>
-        ul {
-            font-size: 40px;
-            list-style: none;
+        h1::first-letter {
+            font-size: 70px;
+            font-style:italic;
+            color:goldenrod;
         }
 
-        ul li:first-child {
-            color: red;
-        }
-
-        ul li:last-child {
+        h1::before {
+            content: "This is  ";
             color: green;
         }
 
-        ul li:nth-child(3) {
-            color: blue;
+        h1::after {
+            content: " Nice";
+            font-size: 50px;
+            color: green;
         }
     </style>
 </head>
 <body>
-    <ul>
-        <li>item 1</li>
-        <li>item 2</li>
-        <li>item 3</li>
-        <li>item 4</li>
-        <li>item 5</li>
-    </ul>
+    <h1>Heading</h1>
+    <p>
+            Peudo elements is used to style specified part of element.<br>
+            Such as, first letter, line or an element.<br>
+            Inserting content before, or after content of element.
+        </p>
+        <p>
+            We use two colons for pseudo elements.
+            ex) h1::before, h1::after
+        </p>
+        <p>
+            These are the properties we can apply 
+    
+            <ol>
+                <li>font properties</li>
+                <li>color properties</li>
+                <li>background properties</li>
+                <li>word-spacing</li>
+                <li>letter-spacing</li>
+                <li>text-decoration</li>
+                <li>vertical-align</li>
+                <li>text-transform</li>
+                <li>text-transform</li>
+                <li>clear</li>
+            </ol>
+        </p>
     <a href="index.html">back to main</a>
+
 
 </body>
 </html>
